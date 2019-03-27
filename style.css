@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, html * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.nav {
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.navContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0px;
+}
+
+.hero, .about, .portfolio, .contact, footer {
+	padding: 10%;
+}
+
+.hero {
+	margin: auto;
+
+	text-align: center;
+	background-color: white;
+}
+
+.about {
+	background-color: lightgray;
+	text-align:center;
+}
+
+.portfolio {
+	background-color: gray;
+	text-align: center;
+}
+
+.contact {
+	background-color: lightgray;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+a:link {
+	text-decoration: none;
+	color: grey;
+}
