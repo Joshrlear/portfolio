@@ -4,47 +4,97 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stlyesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Karla" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>myPortfolio</title>
 </head>
 <body>
-<nav role="navigation" class="nav">
-	<ul class="navContainer">
-		<li class="navElement"><a href="#">HOME</a></li>
-		<li class="navElement"><a href="#">ABOUT</a></li>
-		<li class="navElement"><a href="#">PORTFOLIO</a></li>
-		<li class="navElement"><a href="#">CONTACT</a></li>
-	</ul>
-</nav>
+	<section class="nav-section">
+			<nav role="navigation" class="nav">
+				<div id="menu" class="menu">
+						<div class="menu-bar1"></div>
+						<div class="menu-bar2"></div>
+						<div class="menu-bar3"></div>
+				</div>
+				<div id="navMenu" class="nav-menu">
+					<ul class="nav-menu-container">
+						<li class="nav-element"><a href="#home">HOME</a></li>
+						<li class="nav-element"><a href="#about">ABOUT</a></li>
+						<li class="nav-element"><a href="#portfolio">PORTFOLIO</a></li>
+						<li class="nav-element"><a href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+				</nav>
+			</section>
     <main>
-      <div class="hero">
-        <h1>MY NAME'S JOSH</h1>
-        <p>I'M A FULLSTACK DEVELOPER<br>
-		  SPECIALIZING IN...</p>
-		</div>
-      	<img class="img" src="">      
-      <div class="about">
-		  <img class="img" src=""></img>
-        <h2>About Josh</h2>
-        <article> Tech background</article>
-        <article>personal note</article>
-        <article>Dev Skills</article>
-		</div>
-	 <div class="portfolio">
-		 <h2>Portfolio</h2>
-		 <h3>Dr. QuizRespect</h3>
-		 <p>lorem ipsum</p>
-		 <button class="demo">DEMO</button>
-		 <button class="repo">REPO</button>
-	 	 </div>
-      <div class="contact">
-		<form class="form">
+      <section id="home" class="hero">
+				<img class="logo" src=".\images\JL-logo-small.png" alt="Josh Lear's logo">
+				<img class="watermark" src=".\images\JL-logo-large.png" alt="logo watermark">
+				<div class="hero-img"></div>
+				<header class="over-img">
+						<h1>MY NAME'S JOSH</h1>
+						<p>I'M A FULLSTACK DEVELOPER<br>
+					SPECIALIZING IN...</p>
+				</header>
+			</section>
+      <section id="about" class="about">
+					<img class="about-img img" src=".\images\88428.jpg" alt="Person typing on laptop in brightly lit room">
+					<article class="about-text">
+						<h2>About Josh</h2>
+							<p>
+									Josh Lear is a current student of Thinkful’s fullstack flex coding bootcamp. With years of experience 
+									in real estate, marketing and project management, Josh, has the perfect blend of training and real world 
+									experience coupled with a plethora of innovation and enthusiasm for any project.
+							</p>
+							<br>
+							<p>
+								<strong><em>As a web developer,</em></strong> Josh has been trained in the following languages and platforms: HTML, Css, Javascript, Jquery, Git & Github. 
+							</p>
+							<br>
+							<img class="personal-note-img img" src=".\images\30639.jpg" alt="Friends holding lightbulb cutouts above thier heads like they are having ideas">
+							<h3 class="personal-note-text">On a personal</h3>
+								<p>
+										Josh is an aspiring entrepreneur and avid innovator, investing much of his time in 
+										the pursuit of making the world an easier and more enjoyable place for all, whether through an app, a 
+										business or a non-profit venture.
+								</p>
+							</article>
+			</section>
+	 <section id="portfolio" class="portfolio">
+		 <div class="project-text-1 project-text">
+			 <header>
+				 <h2>Portfolio</h2>
+				</header>
+				<h3>Dr. QuizRespect</h3>
+				<p>A quiz dedicated to the two-time Back to back 
+					1993 - 1994 Blockbuster video-gaming world champion 
+					and true international gaming superstar, 
+					Dr. DisRespect “Doc”m
+					<br>
+					<br>
+					<span class="gray"><em><strong>This quiz was a school project 
+						for the Thinkful coding boot camp.</strong></em></span>
+					</p>
+				<div class="button-container">
+					<button class="demo">DEMO</button>
+					<button class="repo">REPO</button>
+				</div>
+		 </div>
+		 <div class="project-1 project">
+			 <img class="mockup" src=".\images\Dr.QizRespect-mockup.png" alt="Dr. QuizRespect mockup">
+		 </div>
+		</section>
+    <div id="contact" class="contact">
+			<form class="form">
 			<h2>Contact</h2>
-			<input type="text" name="name" placeholder="name"><br>
-			<input type="text" name="email" placeholder="email"><br>
-			<input type="text" name="message" placeholder="message"><br>
-			<button type="submit">send</button>
-		  	</form>
+			<div class="input-container">
+				<input type="text" name="name" placeholder="name" required><br>
+				<input type="text" name="email" placeholder="email"required><br>
+				<textarea type="text" name="message" placeholder="message"required></textarea><br>
+				<button type="submit" class="send">send</button><br>
+			</div>
+		  </form>
 		</div>
     </main>
 	<footer>
@@ -53,6 +103,7 @@
 		<a href="https://www.facebook.com/josh.lear.7" class="icon facebook"></a>
 		<a href="https://www.linkedin.com/in/josh-lear-95837631/" class="icon linkedin"></a>
 		<a href="https://github.com/Joshrlear?tab=repositories" class="icon github"></a>
+		<script type="text/javascript" src="script.js"></script>
 	</footer>
 </body>
 </html>
