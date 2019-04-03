@@ -7,9 +7,6 @@ html, html * {
 	box-sizing: border-box;
 }
 
-a:-webkit-any-link {
-	color: black;
-}
 
 /* accent color is rgb(255, 1, 21) */
 
@@ -65,7 +62,7 @@ textarea {
 a {
 	text-decoration: none;
 	transition: 100ms;
-	color: black;
+	color: white;
 }
 
 a, button {
@@ -398,6 +395,10 @@ footer, footer a {
 	}
 	.nav-section {
 		mix-blend-mode: soft-light;
+	}
+
+	a {
+		color: black;
 	}
 
 	a:visited {
