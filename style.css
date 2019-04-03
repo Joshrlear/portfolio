@@ -7,6 +7,10 @@ html, html * {
 	box-sizing: border-box;
 }
 
+a:-webkit-any-link {
+	color: black;
+}
+
 /* accent color is rgb(255, 1, 21) */
 
 /* general class styles */
@@ -341,7 +345,7 @@ footer {
 }
 
 footer, footer a {
-	color: darkgrey;
+	color: black;
 }
 
 .socialmedia-icons {
@@ -392,11 +396,11 @@ footer, footer a {
 		background-color: unset;
 	}
 	.nav-section {
-		mix-blend-mode: color-dodge;
+		mix-blend-mode: soft-light;
 	}
 
 	a:visited {
-		color: darkgrey;
+		color: black;
 	}
 
 	li {
