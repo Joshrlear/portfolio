@@ -16,31 +16,47 @@ html, html * {
 	color: gray;
 }
 
-/* General tag styles */
 
-body {
-	margin: 0px;
-}
 
+/* font styles */
 h1, h2, h3, a, input, textarea {
 	font-family: 'Karla', sans-serif;
 }
 
 h1 {
-	font-size: 4vh;
+	font-size: 3rem;
 }
 
 h2 {
-	font-size: 3vh;
+	font-size: 2.5rem;
 }
 
-h3, p, input, textarea, button, a {
-	font-size: 1.75vh;
-	line-height: 2.5vh;
+h3 {
+	font-size: 2rem;
 }
+
+h4 {
+	font-size: 1.5rem;
+}
+
+p, input, textarea, button, a {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
 
 p, article, button {
 	font-family: 'Inconsolata', monospace;
+}
+
+
+
+
+
+/* General tag styles */
+
+body {
+	margin: 0px;
 }
 
 section * {
@@ -107,18 +123,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* specific tag styles */
 
 .nav-section {
-	margin: auto;
 	position: fixed;
 	top: 0;
-	left: 0;
-	right: 0;
 	z-index: 10;
-	width: 100%;
+	width: 100vw;
 }
 
 nav {
-	position: absolute;
-	width: 100%;
+	width: 100vw;
 }
 
 .logo {
@@ -193,47 +205,45 @@ li a {
 	filter: brightness(75%);
 }
 
-.watermark {
-	position: absolute;
-	top: 45%;
-	left: 0%;
-	height: 60%;
-	filter: opacity(.1);
-	z-index: 1;
+.over-img {
+	width: 100%;
+	text-shadow: -2px 3px 8px rgba(0,0,0,0.2);
 }
 
 .hero .over-img {
 	position: absolute;
-	padding: 0 2.5% 0 2.5%;
 	transform: translate(-50%, -50%);
 	top: 70%;
-	left: 38%;
+	left: 58%;
 	text-align: left;
 }
 
-.about {
-	padding: 5%;
+.hero .over-img h1 {
+	width: 85%;
+	padding-bottom: 5%;
+}
+
+.about-title {
+	padding: 8%;
 }
 
 .about * {
 	margin: auto;
 }
 
-.about h2 {
-	padding-bottom: 20px;
-}
-
 .about-img {
 	display: block;
+	object-fit: cover;
 	width: 100%;
 	max-height: 430px;
-	max-width: 600px;
-	padding: 30px 0px;
+	max-width: 84%;
+	padding: 0px 0px 30px 0px;
 }
 
 .about-text {
 	width: 100%;
-	max-width: 600px;
+	max-width: 700px;
+	padding: 8%;
 }
 
 .personal-note-img {
@@ -250,25 +260,29 @@ li a {
 }
 
 .mockup {
+	position: relative;
 	width: 100%;
 	z-index: 1;
 }
 
 .portfolio {
-	margin: 5%;
-	display: flex;
-	flex-direction: column-reverse;
+	padding: 8%;
 	background-color: lightgrey;
 }
 
+.portfolio-title {
+	padding-bottom: 8%;
+}
+
 .project-text {
-	padding: 30px 20px 30px 20px;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .project-specs {
 	display: flex;
 	flex-direction: row;
-	padding-bottom: 0px;
+	padding-bottom: 5%;
 }
 
 .project-specs h3 {
@@ -292,19 +306,21 @@ li a {
 }
 
 .button-container {
-	padding-top: 5%;
+	padding-top: 10%;
+	padding-bottom: 10%;
 	text-align: center;
 }
 
-.demo, .repo {
-	width: 65px;
-	height: 30px;
-	padding: 0px;
-	font-weight: 700;
+hr {
+	margin-bottom: 10%;
+	height: 3px;
+	background-color: grey;
 }
 
 button {
 	transition: 200ms;
+	width: 120px;
+	height: 40px;
 }
 
 button:hover {
@@ -318,19 +334,20 @@ button:hover {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	padding: 10%;
 	height: 80vh;
+}
+
+.send {
+	margin-left: calc(100% - 120px);
 }
 
 .input-container {
 	display: flex;
 	flex-direction: column;
-	width: 300px;
+	min-width: 260px;
+	max-width: 600px;
+	width: 85%;
 	margin: auto;
-}
-
-.send {
-	width: 50px;
 }
 
 footer {
@@ -369,13 +386,104 @@ footer, footer a {
 	transition: 300ms;
 }
 
-@media only screen and (min-width: 768px) {
-	.watermark {
-		left: 25%;
+
+@media only screen and (min-width: 750px) {
+	@media only screen and (max-width: 1060px) {
+		
+		/* font styles */
+		h1 {
+			font-size: 5rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+
+		/* heading over hero image */
+		.hero .over-img h1 {
+			width: unset;
+			padding-bottom: unset;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 900px) {
+	@media only screen and (min-height: 1300px) {
+
+		
+		/* font styles */
+		h1 {
+			font-size: 6rem;
+		}
+
+		h2 {
+			font-size: 4rem;
+		}
+
+
+		/* heading over hero image */
+		.hero .over-img h1 {
+			width: unset;
+			padding-bottom: unset;
+		}
+
+
+		/* general styles */
+		.about-text {
+			display: grid;
+			grid-template-areas: "a b";
+			max-width: unset;
+		}
+	
+		.about-main {
+			grid-area: a;
+			padding-right: 25px;
+		}
+	
+		.about-personal-note {
+			grid-area: b;
+			margin-top: 0px;
+			padding-left: 25px;
+		}
+	
+		.personal-note-img	{
+			display: none;
+		}
 	}
 }
 
 @media only screen and (min-width: 1025px) {
+
+	/* font styles */
+	h1 {
+		font-size: 6rem;
+	}
+	h2 {
+		font-size: 4rem;
+	}
+
+	
+
+	/* heading over hero image */
+	.hero .over-img h1 {
+		width: unset;
+		padding-bottom: unset;
+	}
+
+
+
+	/* general styles */
+	header {
+		padding-bottom: 150px;
+	}
+
+	.about, .portfolio {
+		padding: 8%;
+	}
+
+	/* nav */
 	.menu {
 		display: none;
 	}
@@ -397,6 +505,14 @@ footer, footer a {
 		mix-blend-mode: soft-light;
 	}
 
+	li {
+		margin: 27px;
+	}
+
+
+
+	/* anchor tags */
+
 	a {
 		color: black;
 	}
@@ -405,33 +521,31 @@ footer, footer a {
 		color: black;
 	}
 
-	li {
-		margin: 27px;
+
+
+	/* about section */
+	.about-title {
+		padding: 0%;
 	}
 
-	.watermark {
-		left: 70%;
-	}
-
-	.hero, .about, .portfolio, .contact {
-		height: 100vh;
-	}
-
-	.about {
-		display: grid;
-		grid-template-areas: 'about-img about-text';
+	.about-info {
+		display: flex;
+		height: 100%;
 	}
 
 	.about-img {
 		object-fit: cover;
 		padding: 0px;
 		height: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		width: 40%;
+		max-width: unset;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 
 	.about-text {
-		padding-left: 50px;
+		padding: 0px 0px 0px 50px;
+		width: 60%;
 	}
 
 	.personal-note-img {
@@ -442,24 +556,35 @@ footer, footer a {
 		padding-top: 20px;
 	}
 
+
+
+	/* portfolio section */
 	.portfolio {
-		display: grid;
-		grid-template-columns: 40% 60%;
 		margin: 0px;
+		padding: 5%;
+		display: block;
+	}
+
+	.project-text {
+		flex-direction: unset;
 	}
 
 	.project-text, .project {
 		margin: auto;
 	}
 
+	.project {
+		overflow: unset;
+		width: 60%;
+	}
+
 	.project-text header {
 		padding: 0px;
 	}	
 
-	.project-text:not(:nth-child(2)) {
-		padding: 0px 0px 20px 20%;
+	.project-info {
+		width: 40%;
 	}
-	
 	
 	.button-container {
 		text-align: unset;
@@ -471,8 +596,13 @@ footer, footer a {
 
 	.mockup {
 		object-fit: fill;
+		width: 100%;
+		left: unset;
 	}
 
+
+
+	/* footer section */
 	footer {
 		margin-top: -110px;
 	}

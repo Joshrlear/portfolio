@@ -30,7 +30,6 @@
     <main role="main">
       <section id="home" class="hero">
 				<img role="img" class="logo" src=".\images\JL-logo-small.png" alt="Josh Lear's logo">
-				<img role="img" class="watermark" src=".\images\JL-logo-large.png" alt="logo watermark">
 				<div class="hero-img"></div>
 				<header class="over-img">
 						<h1>MY NAME'S JOSH</h1>
@@ -39,9 +38,13 @@
 				</header>
 			</section>
       <section id="about" class="about">
+				<header role="heading" class="about-title">
+					<h2>About Josh</h2>
+				</header>
+				<div class="about-info">
 					<img role="img" class="about-img img" src=".\images\88428.jpg" alt="Person typing on laptop in brightly lit room">
 					<article role="article" class="about-text">
-						<h2>About Josh</h2>
+						<section class="about-main">
 							<p>
 									Josh Lear is a current student of Thinkful’s fullstack flex coding bootcamp. With years of experience 
 									in real estate, marketing and project management, Josh, has the perfect blend of training and real world 
@@ -51,45 +54,90 @@
 							<p>
 								<strong><em>As a web developer,</em></strong> Josh has been trained in the following languages and platforms: HTML, Css, Javascript, Jquery, Git & Github. 
 							</p>
+						</section>
 							<br>
 							<img role="img" class="personal-note-img img" src=".\images\30639.jpg" alt="Friends holding lightbulb cutouts above thier heads like they are having ideas">
-							<h3 class="personal-note-text">On a personal</h3>
+							<section class="about-personal-note">
+								<h3 class="personal-note-text">On a personal</h3>
 								<p>
 										Josh is an aspiring entrepreneur and avid innovator, investing much of his time in 
 										the pursuit of making the world an easier and more enjoyable place for all, whether through an app, a 
 										business or a non-profit venture.
 								</p>
+							</section>
 							</article>
+						</div>
 			</section>
 	 <section id="portfolio" class="portfolio">
+			<header role="heading" class="portfolio-title">
+					<h2>Portfolio</h2>
+				 </header>
 		 <div class="project-text-1 project-text">
-			 <header>
-				 <h2>Portfolio</h2>
-				</header>
+		 <article role="article" id="drQuizRespect-info" class="project-info">
+			 <h3>Dr. QuizRespect</h3>
 				<div class="project-specs">
-					<h3>Dr. QuizRespect</h3>
 					<img role="img" src="./images/icons/html-icon.png" alt="html icon">
 					<img role="img" src="./images/icons/css-icon.png" alt="css icon">
 					<img role="img" src="./images/icons/js-icon.png" alt="js icon">
 					<img role="img" src="./images/icons/jquery-icon.png" alt="jquery icon">
 				</div>
-				<p>A quiz dedicated to the two-time Back to back 
-					1993 - 1994 Blockbuster video-gaming world champion 
-					and true international gaming superstar, 
-					Dr. DisRespect “Doc”m
-					<br>
-					<br>
-					<span class="gray"><em><strong>This quiz was a school project 
-						for the Thinkful coding boot camp.</strong></em></span>
-					</p>
-				<div class="button-container">
-					<a href="https://joshrlear.github.io/Dr.QuizRespect" target="_blank"><button role="button" type="button"class="demo">DEMO</button></a>
-					<a href="https://github.com/Joshrlear/Dr.QuizRespect" target="_blank"><button role="button" type="button" class="repo">REPO</button></a>
-				</div>
-		 </div>
+					<p>
+						A quiz dedicated to the two-time Back to back 
+						1993 - 1994 Blockbuster video-gaming world champion 
+						and true international gaming superstar, 
+						Dr. DisRespect “Doc”
+						<br>
+						<br>
+						<span class="gray"><em><strong>
+							This quiz was a school project 
+							for the Thinkful coding boot camp.
+						</strong></em></span>
+						</p>
+					<div class="button-container">
+						<a href="https://joshrlear.github.io/Dr.QuizRespect" target="_blank"><button role="button" type="button"class="demo">demo</button></a>
+						<a href="https://github.com/Joshrlear/Dr.QuizRespect" target="_blank"><button role="button" type="button" class="repo">repo</button></a>
+					</div>
+		 </article>
 		 <div class="project-1 project">
-			 <img role="img" class="mockup" src=".\images\Dr.QizRespect-mockup.png" alt="Dr. QuizRespect mockup">
+				<img role="img" class="mockup" src=".\images\Dr.QizRespect-mockup.png" alt="Dr. QuizRespect mockup">
+			</div>
 		 </div>
+		 <hr>
+		 <div class="project-text-2 project-text">
+				<article role="article" id="weeklyMealPlan" class="project-info">
+					<h3>Weekly Meal Plan</h3>
+					 <div class="project-specs">
+						 <img role="img" src="./images/icons/html-icon.png" alt="html icon">
+						 <img role="img" src="./images/icons/css-icon.png" alt="css icon">
+						 <img role="img" src="./images/icons/js-icon.png" alt="js icon">
+						 <img role="img" src="./images/icons/jquery-icon.png" alt="jquery icon">
+					 </div>
+						 <p>
+								This app allows a user to create a meal plan 
+								for the week ahead based on criteria such as, 
+								diet, calorie limit, exclusions like allergies 
+								and more. After the user enters their criteria 
+								they are given a schedule, list of ingredients 
+								time it takes to cook and more.
+							 <br>
+							 <br>
+							 <span class="gray"><em><strong>
+								 This app was a school project 
+								 for the Thinkful coding boot camp.
+								 It display the students knowledge 
+								 of front end programming utilizing 
+								 jQuery and apis
+							 </strong></em></span>
+							 </p>
+						 <div class="button-container">
+							 <a href="https://joshrlear.github.io/weeklyMealPlan" target="_blank"><button role="button" type="button"class="demo">demo</button></a>
+							 <a href="https://github.com/Joshrlear/weeklyMealPlan" target="_blank"><button role="button" type="button" class="repo">repo</button></a>
+						 </div>
+				</article>
+				<div class="project-1 project">
+					 <img role="img" class="mockup" src=".\images\weeklyMealPlan-fullMockup-01.png" alt="Weekly Meal Plan mockup">
+				 </div>
+				</div>
 		</section>
     <div id="contact" class="contact">
 			<form class="form">
