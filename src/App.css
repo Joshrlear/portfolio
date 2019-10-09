@@ -3,7 +3,6 @@
   display: grid;
   -ms-grid-columns: 3fr 10fr 1fr;
       grid-template-columns: 3fr 10fr 1fr;
-  background-color: #252525;
 }
 
 .App .section_container {
@@ -11,13 +10,20 @@
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   overflow: hidden;
+  z-index: 2;
 }
 
-.App .section_container .section {
-  margin: 70% 0% 0% 0%;
+.App .section_container .section_mount {
+  position: fixed;
+  bottom: 0px;
+  margin: 0% 0% 12% -15%;
+}
+
+.App .section_container .section_mount .section {
+  position: relative;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  opacity: 0.2;
-  font-size: 5rem;
+  opacity: 0.09;
+  font-size: 10rem;
 }
 /*# sourceMappingURL=App.css.map */

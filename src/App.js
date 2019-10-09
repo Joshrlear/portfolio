@@ -16,7 +16,9 @@ function App() {
         component={ Projects }
       />
       <div className="section_container">
-        <h2 className="section">Portfolio</h2>
+        <div className="section_mount">
+          <h2 className="section">Portfolio</h2>
+          </div>
       </div>
     </div>
   );
