@@ -1,0 +1,88 @@
+.projects {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  padding: 1% 0% 0% 0%;
+  margin: 0px;
+}
+
+.projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5% 15%;
+  padding: 5%;
+  background-color: white;
+}
+
+.projects .project:hover {
+  -webkit-box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.25), -20px 0px 40px -40px rgba(0, 0, 0, 0.5), 20px 0px 40px -40px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.25), -20px 0px 40px -40px rgba(0, 0, 0, 0.5), 20px 0px 40px -40px rgba(0, 0, 0, 0.5);
+}
+
+.projects .project .section_one {
+  width: 50%;
+}
+
+.projects .project .section_one .img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.projects .project .section_one .img_container:hover .button_container {
+  opacity: 1;
+}
+
+.projects .project .section_one .app_name {
+  width: 100%;
+}
+
+.projects .project .section_one .button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.projects .project .section_one .button_container .btn_noback {
+  width: 100px;
+  height: 40px;
+  margin: 15% auto 0px auto;
+  background: none;
+  border: white 2px solid;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease;
+}
+
+.projects .project .section_one .button_container .btn_noback:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.projects .project .section_one .button_container .btn_bottom {
+  margin: 10% auto 0px auto;
+}
+
+.projects .project .section_two {
+  width: 50%;
+  margin: 0% 0% 0% 5%;
+}
+/*# sourceMappingURL=Projects.css.map */

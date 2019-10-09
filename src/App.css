@@ -1,22 +1,23 @@
 .App {
-  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 10fr 1fr;
+      grid-template-columns: 3fr 10fr 1fr;
+  background-color: #252525;
 }
 
-.App-logo {
-  height: 40vmin;
+.App .section_container {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .section_container .section {
+  margin: 70% 0% 0% 0%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  opacity: 0.2;
+  font-size: 5rem;
 }
-
-.App-link {
-  color: #09d3ac;
-}
+/*# sourceMappingURL=App.css.map */
