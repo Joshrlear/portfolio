@@ -13,7 +13,7 @@ export default class Projects extends React.Component {
                             <div className="img_container">
                                 <img
                                     className="app_name" 
-                                    src={require(`../images/chatr.png`)}/>
+                                    src={'http://localhost:3000/images/' + project.img}/>
                                 <div className="button_container">
                                   <button 
                                     className="btn_noback" 
