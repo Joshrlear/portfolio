@@ -37,14 +37,14 @@ export default function About() {
                 <p>Background in real estate, marketing, sales and 
                   project management. Student of Thinkful's Engineering
                   flex program. Avid tennis player, mountain bike 
-                  enthusiast and music production hobbiest.
+                  enthusiast and music production hobbyist.
                 </p>
                 <p>I am proficient in React, nodejs, postgres, HTML, 
                   websockets, css/sass, jQuery, and I plan to add 
                   neural networks to that list next.
                 </p>
                 <p>My ideal position would be at a company that
-                  specializes in either artificial intellegnce or
+                  specializes in either artificial intelligence or
                   with a creative company like Adobe or Spotify.
                 </p>
               </article>

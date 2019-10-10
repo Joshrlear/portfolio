@@ -4,9 +4,9 @@ export default {
             name: 'Chatr',
             img: 'chatr.png',
             description: `An easy to use chat app with clean animations 
-            and features. Chatr is connected to a datase that stores all users,
+            and features. Chatr is connected to a database that stores all users,
             rooms, and keeps track of which rooms a user is in. You can quickly
-            change users from the convient profile icon on the top right.`,
+            change users from the convenient profile icon on the top right.`,
             tech: 'React | Postgres | Node | Sockets | Sass',
             live: 'https://chat-client.joshrlear.now.sh/',
             github: 'https://github.com/Joshrlear/chatr-client'
@@ -26,7 +26,7 @@ export default {
             name: 'Recipe App',
             img: 'recipeApp.jpg',
             description: `This is allows the user to find meals
-            based on their deitary restrictions, allergies, and preferences.`,
+            based on their dietary restrictions, allergies, and preferences.`,
             tech: 'HTML | jQuery | CSS ',
             live: 'https://joshrlear.github.io/weeklyMealPlan/',
             github: 'https://github.com/Joshrlear/weeklyMealPlan'
