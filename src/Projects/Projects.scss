@@ -1,0 +1,195 @@
+@import '../utilities';
+
+.projects {
+    padding: 1% 0% 0% 0%;
+    margin: 8vh 0vw 35vh 0vw;
+
+    @include medium {
+        grid-row: 2/3;
+        margin: 0px;
+    }
+
+    @include tablet {
+        margin: 8vh 0vw 15vh 0vw; 
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        margin: 5vh 10vw;
+        padding: 3%;
+        background-color: white;
+        border-radius: 20px;
+        transition: all 0.5s ease-out,
+                    box-shadow 0.75s ease;
+        @include medium {
+            display: flex;
+            flex-direction: column;
+            margin: 3vh 5vw 15vh 5vw;
+        }
+        @include phone {
+            flex-direction: column-reverse;
+            margin: 0% 0% 30% 0%;
+            padding: 0px;
+        }
+
+        &:hover {
+            box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.75), 
+                        -20px 0px 40px -40px rgba(0, 0, 0, 0.75), 
+                        20px 0px 40px -40px rgba(0, 0, 0, 0.75), 
+                        0px 0px 0px 100vw rgba(255,255,255,0.75);
+
+            position: relative;
+            z-index: 1;
+            transition: all 0.15s ease,
+                        box-shadow 0.5s ease;
+        }
+
+        .section_one {
+            width: 50%;
+            @include medium {
+                width: 100%;
+            }
+            @include phone {
+                width: 100%;
+            }
+
+            .img_container {
+                display: flex;
+                position: relative;
+                height: 100%;
+                @include tablet {
+                    display: initial;
+                    height: initial;
+                }
+    
+                &:hover {
+                    .button_container {
+                        opacity: 1;
+                    }
+                }
+            }
+    
+            .app_image {
+                width: 100%;
+                object-fit: cover;
+                box-shadow: 0px 60px 60px -60px rgba(0,0,0,0.5);
+                transition: box-shadow 0.5s ease-out;
+                @include phone {
+                    box-shadow: none;
+                }
+
+                &.true {
+                    box-shadow: 0px 60px 60px -60px rgba(0,0,0,0);
+                }
+            }
+    
+            .button_container {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.55);
+                opacity: 0;
+                transition: opacity 0.15s ease-out;
+                @include tablet {
+                    opacity: 1;
+                    top: calc(100% + 20px);
+                    height: 40px;
+                    padding: 0%;
+                    margin-top: 5%;
+                    flex-direction: row;
+                    background: none;
+                }
+                @include phone {
+                    opacity: 1;
+                    top: calc(100% + 20px);
+                    height: 40px;
+                    padding: 0%;
+                    flex-direction: row;
+                    background: none;
+                }
+    
+                .btn_noback {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 40px;
+                    margin: 15% auto 0px auto;
+                    background: none;
+                    border: white 2px solid;
+                    border-radius: 5px;
+                    color: white;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: background-color 0.15s ease;
+                    @include tablet {
+                        margin: auto;
+                        border: none;
+                        background: rgb(0, 152, 223);
+                    }
+                    @include phone {
+                        margin: 0% auto 0% 15%;
+                        border: none;
+                        background: rgb(0, 152, 223);
+                    }
+                
+                    &:hover {
+                        background-color: rgba(255,255,255,0.25);
+                    }
+                }
+                .btn_bottom {
+                    margin: 10% auto 0px auto;
+                    @include tablet {
+                        margin: auto;
+                    }
+                    @include phone {
+                        margin: 0% 15% 0% auto;
+                    }
+                }
+            }
+            .tech_used_medium {
+                display: none;
+                @include tablet {
+                    //display: block;
+                    font-kerning: none;
+                }
+                @include phone {
+                    display: none
+                }
+            }
+        }
+
+        .section_two {
+            width: 50%;
+            margin: 0% 0% 0% 5%;
+            @include medium {
+                width: 100%;
+                margin: 0px;
+            }
+            @include phone {
+                width: 100%;
+                margin: 0% 0% 10% 0%;
+                padding: 0% 15%;
+                box-sizing: border-box;
+            }
+
+            .app_name, .app_description {
+                margin: 0%;
+            }
+
+            .tech_used {
+                display: initial;
+                @include tablet {
+                    display: block;
+                }
+                @include phone {
+                    display: initial;
+                }
+            }
+        }
+    }
+}
+

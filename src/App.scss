@@ -1,0 +1,99 @@
+@import './utilities';
+
+.App {
+    display: grid;
+    grid-template-columns: 3fr 10fr 1fr;
+    @include medium {
+        display: grid;
+        grid-template-columns: 400px 10fr 1fr;
+        grid-template-rows: 15vh auto;
+    }
+    @include tablet {
+        display: initial;
+    }
+
+    .portfolio {
+        grid-column: 2/3;
+        @include medium {
+            display: grid;
+            grid-template-rows: 15vh auto;
+            
+        }
+        @include phone {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .section_container {
+            grid-row: 1/3;
+            grid-column: 3/4;
+            overflow: hidden;
+            z-index: 2;
+            @include medium {
+                grid-column: 1/4;
+                grid-row: 1/2;
+                margin: 0px;
+                padding: 5% 10%;
+                //overflow: hidden;
+                z-index: 2;
+            }
+            @include phone {
+                background-color: rgb(0, 152, 223);
+            }
+            &.fixed {
+                @include phone {
+                    position: fixed;
+                    top: 0px;
+                    width: 100%;
+                }
+            }
+    
+            .section_mount {
+                position: fixed;
+                top: 0px;
+                right: 0px;
+                left: calc(100% - 18vh);
+                transform: rotate(90deg);
+                @include medium {
+                    position: initial;
+                    top: initial;
+                    right: initial;
+                    left: initial;
+                    transform: initial;
+                }
+                @include tablet {
+                    top: 15vh;
+                }
+                @include phone {
+                    position: initial;
+                    top: initial;
+                    right: initial;
+                    left: initial;
+                    transform: initial;
+                }
+    
+                .section {
+                    position: relative;
+                    opacity: 0.09;
+                    font-size: 10rem;
+                    @include medium {
+                        position: relative;
+                        opacity: 0.09;
+                        font-size: 5rem;
+                        margin: auto;
+                    }
+                    @include tablet {
+                        margin: 20px 0px 100px 0px;
+                        font-size: 4rem;
+                    }
+                    @include phone {
+                        margin: 1% 2%;
+                        font-size: 2rem;
+                        color: white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
