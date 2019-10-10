@@ -97,6 +97,12 @@
   margin: 25px 0px 0px 0px;
 }
 
+.about .inner_container .main_section .header .email {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0098df;
+}
+
 .about .inner_container .main_section .btn_container {
   margin-top: 10%;
   display: -webkit-box;

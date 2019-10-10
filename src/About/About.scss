@@ -63,8 +63,9 @@
             padding: 0% 15% 15% 15%;
     
             .header {
-                .title { font-size: 2rem; margin: 0px 0px 10px 0px; }
+                .title    { font-size: 2rem; margin: 0px 0px 10px 0px; }
                 .subtitle { font-size: 1rem; margin: 25px 0px 0px 0px; }
+                .email    { text-decoration: none; font-weight: 700; color: rgb(0, 152, 223); }
             }
     
             .btn_container {

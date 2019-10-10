@@ -29,7 +29,7 @@
         }
         @include phone {
             flex-direction: column-reverse;
-            margin: 0% 0% 20% 0%;
+            margin: 0% 0% 30% 0%;
             padding: 0px;
         }
 
@@ -41,7 +41,6 @@
 
             position: relative;
             z-index: 1;
-            transform: scale(1.02);
             transition: all 0.15s ease,
                         box-shadow 0.5s ease;
         }
@@ -59,6 +58,10 @@
                 display: flex;
                 position: relative;
                 height: 100%;
+                @include tablet {
+                    display: initial;
+                    height: initial;
+                }
     
                 &:hover {
                     .button_container {
@@ -90,6 +93,23 @@
                 background: rgba(0, 0, 0, 0.55);
                 opacity: 0;
                 transition: opacity 0.15s ease-out;
+                @include tablet {
+                    opacity: 1;
+                    top: calc(100% + 20px);
+                    height: 40px;
+                    padding: 0%;
+                    margin-top: 5%;
+                    flex-direction: row;
+                    background: none;
+                }
+                @include phone {
+                    opacity: 1;
+                    top: calc(100% + 20px);
+                    height: 40px;
+                    padding: 0%;
+                    flex-direction: row;
+                    background: none;
+                }
     
                 .btn_noback {
                     display: flex;
@@ -105,6 +125,16 @@
                     text-decoration: none;
                     cursor: pointer;
                     transition: background-color 0.15s ease;
+                    @include tablet {
+                        margin: auto;
+                        border: none;
+                        background: rgb(0, 152, 223);
+                    }
+                    @include phone {
+                        margin: 0% auto 0% 15%;
+                        border: none;
+                        background: rgb(0, 152, 223);
+                    }
                 
                     &:hover {
                         background-color: rgba(255,255,255,0.25);
@@ -112,12 +142,18 @@
                 }
                 .btn_bottom {
                     margin: 10% auto 0px auto;
+                    @include tablet {
+                        margin: auto;
+                    }
+                    @include phone {
+                        margin: 0% 15% 0% auto;
+                    }
                 }
             }
             .tech_used_medium {
                 display: none;
                 @include tablet {
-                    display: block;
+                    //display: block;
                     font-kerning: none;
                 }
                 @include phone {
@@ -140,10 +176,14 @@
                 box-sizing: border-box;
             }
 
+            .app_name, .app_description {
+                margin: 0%;
+            }
+
             .tech_used {
                 display: initial;
                 @include tablet {
-                    display: none;
+                    display: block;
                 }
                 @include phone {
                     display: initial;

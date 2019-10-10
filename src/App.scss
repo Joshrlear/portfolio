@@ -13,7 +13,7 @@
     }
 
     .portfolio {
-        grid-column: 2/4;
+        grid-column: 2/3;
         @include medium {
             display: grid;
             grid-template-rows: 15vh auto;

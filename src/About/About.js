@@ -17,7 +17,10 @@ export default function About() {
               <header className="header">
                 <h2 className="subtitle">Software Engineer</h2>
                 <h1 className="title">Josh Lear</h1>
-                <a className="email">joshrlear@gmail.com</a>
+                <a className="email"
+                   target="_blank"
+                   href="mailto:joshrlear@gmail.com"
+                >joshrlear@gmail.com</a>
               </header>
               <div className="btn_container">
                 <a className="btn_noback"
