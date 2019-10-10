@@ -34,7 +34,7 @@ export default class Projects extends React.Component {
                                 <img
                                     ref={ this.image[i] }
                                     className={`app_image ${this.state.hover}`} 
-                                    src={'http://localhost:3000/images/' + project.img}/>
+                                    src={project.img}/>
                                 <div className="button_container">
                                   <a 
                                     className="btn_noback"
