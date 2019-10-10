@@ -2,7 +2,7 @@ export default {
     projects: [
         {
             name: 'Chatr',
-            img: 'chatr.png',
+            img: '../public/images/chatr.png',
             description: `An easy to use chat app with clean animations 
             and features. Chatr is connected to a database that stores all users,
             rooms, and keeps track of which rooms a user is in. You can quickly
@@ -13,7 +13,7 @@ export default {
         },
         {
             name: 'udown',
-            img: 'udown.png',
+            img: '../public/images/udown.png',
             description: `udown is a spontaneous event planning app.
             It helps you connect to people near you looking to: play 
             tennis, find a gym buddy, start a book club, etc.
@@ -24,7 +24,7 @@ export default {
         },
         {
             name: 'Recipe App',
-            img: 'recipeApp.jpg',
+            img: '../public/images/recipeApp.jpg',
             description: `This is allows the user to find meals
             based on their dietary restrictions, allergies, and preferences.`,
             tech: 'HTML | jQuery | CSS ',
