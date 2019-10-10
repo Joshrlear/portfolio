@@ -1,17 +1,37 @@
+@import '../utilities';
+
 .projects {
-    grid-column: 2/3;
     padding: 1% 0% 0% 0%;
     margin: 8vh 0vw 35vh 0vw;
+
+    @include medium {
+        grid-row: 2/3;
+        margin: 0px;
+    }
+
+    @include tablet {
+        margin: 8vh 0vw 15vh 0vw; 
+    }
 
     .project {
         display: flex;
         flex-direction: row;
-        margin: 5% 15%;
+        margin: 5vh 10vw;
         padding: 3%;
         background-color: white;
         border-radius: 20px;
         transition: all 0.5s ease-out,
                     box-shadow 0.75s ease;
+        @include medium {
+            display: flex;
+            flex-direction: column;
+            margin: 3vh 5vw 15vh 5vw;
+        }
+        @include phone {
+            flex-direction: column-reverse;
+            margin: 0% 0% 20% 0%;
+            padding: 0px;
+        }
 
         &:hover {
             box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.75), 
@@ -28,10 +48,17 @@
 
         .section_one {
             width: 50%;
+            @include medium {
+                width: 100%;
+            }
+            @include phone {
+                width: 100%;
+            }
 
             .img_container {
                 display: flex;
                 position: relative;
+                height: 100%;
     
                 &:hover {
                     .button_container {
@@ -40,8 +67,18 @@
                 }
             }
     
-            .app_name {
+            .app_image {
                 width: 100%;
+                object-fit: cover;
+                box-shadow: 0px 60px 60px -60px rgba(0,0,0,0.5);
+                transition: box-shadow 0.5s ease-out;
+                @include phone {
+                    box-shadow: none;
+                }
+
+                &.true {
+                    box-shadow: 0px 60px 60px -60px rgba(0,0,0,0);
+                }
             }
     
             .button_container {
@@ -55,6 +92,9 @@
                 transition: opacity 0.15s ease-out;
     
                 .btn_noback {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 100px;
                     height: 40px;
                     margin: 15% auto 0px auto;
@@ -62,6 +102,7 @@
                     border: white 2px solid;
                     border-radius: 5px;
                     color: white;
+                    text-decoration: none;
                     cursor: pointer;
                     transition: background-color 0.15s ease;
                 
@@ -73,11 +114,42 @@
                     margin: 10% auto 0px auto;
                 }
             }
+            .tech_used_medium {
+                display: none;
+                @include tablet {
+                    display: block;
+                    font-kerning: none;
+                }
+                @include phone {
+                    display: none
+                }
+            }
         }
 
         .section_two {
             width: 50%;
             margin: 0% 0% 0% 5%;
+            @include medium {
+                width: 100%;
+                margin: 0px;
+            }
+            @include phone {
+                width: 100%;
+                margin: 0% 0% 10% 0%;
+                padding: 0% 15%;
+                box-sizing: border-box;
+            }
+
+            .tech_used {
+                display: initial;
+                @include tablet {
+                    display: none;
+                }
+                @include phone {
+                    display: initial;
+                }
+            }
         }
     }
 }
+

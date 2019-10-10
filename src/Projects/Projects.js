@@ -3,26 +3,50 @@ import details from '../projectsData'
 import './Projects.css'
 
 export default class Projects extends React.Component {
+    constructor() {
+        super()
+        this.image = ([React.createRef(), React.createRef()])
+        this.state = {
+            hover: false
+        }
+    }
+
+    hover = () => {
+        this.setState({ hover: true })
+    }
+
+    leave = () => {
+        this.setState({ hover: false })
+    }
+
     render() {
         return (
             <ul className="projects">
                 {details.projects.map((project, i) => {
                     return (
-                    <li key={i} className="project">
+                    <li key={i} 
+                        className="project"
+                        onMouseOver={() => this.hover()}
+                        onMouseLeave={() => this.leave()}
+                    >
                         <div className="section_one">
                             <div className="img_container">
                                 <img
-                                    className="app_name" 
+                                    ref={ this.image[i] }
+                                    className={`app_image ${this.state.hover}`} 
                                     src={'http://localhost:3000/images/' + project.img}/>
                                 <div className="button_container">
-                                  <button 
-                                    className="btn_noback" 
-                                    src={project.live}>Live</button>
-                                  <button 
-                                    className="btn_noback btn_bottom" 
-                                    src={project.github}>Github</button>
+                                  <a 
+                                    className="btn_noback"
+                                    target="_blank"
+                                    href={project.live}>Live</a>
+                                  <a 
+                                    className="btn_noback btn_bottom"
+                                    target="_blank"
+                                    href={project.github}>Github</a>
                                 </div>
                             </div>
+                            <p className="tech_used_medium">{project.tech}</p>
                         </div>
                         <div className="section_two">
                             <h2 className="app_name">{project.name}</h2>

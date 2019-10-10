@@ -20,8 +20,14 @@ export default function About() {
                 <a className="email">joshrlear@gmail.com</a>
               </header>
               <div className="btn_container">
-                <button className="btn_noback">LinkedIn</button>
-                <button className="btn_noback">Github</button>
+                <a className="btn_noback"
+                   target="_blank"
+                   href="https://www.linkedin.com/in/weshouldhirejosh/"
+                >LinkedIn</a>
+                <a className="btn_noback"
+                   target="_blank"
+                   href="https://github.com/Joshrlear"
+                >Github</a>
               </div>
               <article className="info_section">
                 <h2>About</h2>
