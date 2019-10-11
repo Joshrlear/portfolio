@@ -7,9 +7,11 @@ export default function About() {
           <div className="inner_container">
             <div className="banner_section">
               <img 
+                alt="banner"
                 className="banner"
                 src={require('./images/banner.jpg')}/>
               <img 
+                alt="headshot"
                 className="headshot"
                 src={require('./images/headshot.jpg')}/>
             </div>
@@ -19,16 +21,19 @@ export default function About() {
                 <h1 className="title">Josh Lear</h1>
                 <a className="email"
                    target="_blank"
+                   rel="noopener noreferrer"
                    href="mailto:joshrlear@gmail.com"
                 >joshrlear@gmail.com</a>
               </header>
               <div className="btn_container">
                 <a className="btn_noback"
                    target="_blank"
+                   rel="noopener noreferrer"
                    href="https://www.linkedin.com/in/weshouldhirejosh/"
                 >LinkedIn</a>
                 <a className="btn_noback"
                    target="_blank"
+                   rel="noopener noreferrer"
                    href="https://github.com/Joshrlear"
                 >Github</a>
               </div>

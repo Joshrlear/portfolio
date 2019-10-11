@@ -32,6 +32,7 @@ export default class Projects extends React.Component {
                         <div className="section_one">
                             <div className="img_container">
                                 <img
+                                    alt="project screenshot"
                                     ref={ this.image[i] }
                                     className={`app_image ${this.state.hover}`} 
                                     src={project.img}/> {/* when running locally add http://localhos:3000/ + */}
@@ -39,10 +40,12 @@ export default class Projects extends React.Component {
                                   <a 
                                     className="btn_noback"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     href={project.live}>Live</a>
                                   <a 
                                     className="btn_noback btn_bottom"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     href={project.github}>Github</a>
                                 </div>
                             </div>
